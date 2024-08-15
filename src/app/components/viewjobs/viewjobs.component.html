@@ -4,14 +4,12 @@
       <p><strong>License Plate:</strong> {{ car.licensePlate }}</p>
       <p><strong>Owner:</strong> {{ car.owner }}</p>
   
-      <!-- Display Jobs related to the car -->
       <div>
         <strong>Jobs:</strong>
         <ul class="list-disc pl-5">
           <li *ngFor="let job of car.jobs">
             {{ job.description }} - 
   
-            <!-- Job Status Dropdown -->
             <select 
               
               (change)="updateJobStatus(car.id, job.jobId, job.status)"
