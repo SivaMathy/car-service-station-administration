@@ -1,0 +1,55 @@
+{
+    "cars": [
+      {
+        "id": 1,
+        "licensePlate": "ABC123",
+        "model": "Toyota Camry",
+        "owner": "John Doe",
+        "jobs": [
+          {
+            "jobId": 101,
+            "description": "Oil Change",
+            "status": "inProgress"
+          },
+          {
+            "jobId": 102,
+            "description": "Tire Rotation",
+            "status": "completed"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "licensePlate": "XYZ789",
+        "model": "Honda Accord",
+        "owner": "Jane Smith",
+        "jobs": [
+          {
+            "jobId": 103,
+            "description": "Brake Inspection",
+            "status": "pending"
+          }
+        ]
+      }
+    ],
+    "jobs": [
+      {
+        "jobId": 101,
+        "carId": 1,
+        "description": "Oil Change",
+        "status": "inProgress"
+      },
+      {
+        "jobId": 102,
+        "carId": 1,
+        "description": "Tire Rotation",
+        "status": "completed"
+      },
+      {
+        "jobId": 103,
+        "carId": 2,
+        "description": "Brake Inspection",
+        "status": "pending"
+      }
+    ]
+  }

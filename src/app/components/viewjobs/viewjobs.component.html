@@ -1,0 +1,28 @@
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+    <div *ngFor="let car of cars" class="bg-white p-4 rounded shadow">
+      <h3 class="text-xl font-bold mb-2">{{ car.model }}</h3>
+      <p><strong>License Plate:</strong> {{ car.licensePlate }}</p>
+      <p><strong>Owner:</strong> {{ car.owner }}</p>
+  
+      <!-- Display Jobs related to the car -->
+      <div>
+        <strong>Jobs:</strong>
+        <ul class="list-disc pl-5">
+          <li *ngFor="let job of car.jobs">
+            {{ job.description }} - 
+  
+            <!-- Job Status Dropdown -->
+            <select 
+              
+              (change)="updateJobStatus(car.id, job.jobId, job.status)"
+              class="ml-2 p-1 rounded border">
+              <option value="pending" [ngClass]="{'text-yellow-500': job.status === 'pending'}">Pending</option>
+              <option value="inProgress" [ngClass]="{'text-blue-500': job.status === 'inProgress'}">In Progress</option>
+              <option value="completed" [ngClass]="{'text-green-500': job.status === 'completed'}">Completed</option>
+            </select>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  

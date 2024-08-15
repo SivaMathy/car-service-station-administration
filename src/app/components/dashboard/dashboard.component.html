@@ -1,0 +1,38 @@
+<div class="min-h-screen bg-gray-100">
+  <div class="bg-blue-600 p-4 text-white text-2xl font-bold">
+    Dashboard
+  </div>
+
+  <div class="p-6">
+    <div class="mb-4">
+      <!-- <button 
+        (click)="addNewCar()"
+        class="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded">
+        Add New Car
+      </button> -->
+    </div>
+
+    <div class="p-6">
+      <div class="mb-4">
+        <!-- <button
+      (click)="addNewCar()"
+      class="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded">      
+      Add New Car     
+      </button> -->
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-4 gap-4 ">
+        <div  class=" p-4 rounded shadow bg-slate-500">
+          <h3 class="text-xl font-bold mb-2">No Of Cars For Service</h3>
+          <h4 class="font-bold mb-2">{{noOfCars}}</h4>
+        </div>
+        <div  class=" p-4 rounded shadow bg-slate-500">
+          <h3 class="text-xl font-bold mb-2">No Of Jobs For Service</h3>
+          <h4 class="font-bold mb-2">{{noOfJobs}}</h4>
+        </div>
+      </div>
+    </div>
+    <div *ngIf="cars.length === 0" class="text-gray-600 text-center">
+      No cars added yet.
+    </div>
+  </div>
+</div>

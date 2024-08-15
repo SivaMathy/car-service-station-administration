@@ -41,7 +41,10 @@
             "styles": [
               "src/styles.scss"
             ],
-            "scripts": [],
+            "scripts": [
+              "node_modules/jquery/dist/jquery.min.js",
+              "node_modules/select2/dist/js/select2.min.js"
+            ],
             "server": "src/main.server.ts",
             "prerender": true,
             "ssr": {
@@ -97,6 +100,7 @@
             "tsConfig": "tsconfig.spec.json",
             "inlineStyleLanguage": "scss",
             "assets": [
+              "src/assets",
               {
                 "glob": "**/*",
                 "input": "public"
@@ -110,5 +114,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "1b0869a7-d77f-4690-912c-723d8914c59f"
   }
 }
